@@ -33,61 +33,43 @@ const work = await Promise.all(
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <h4 class="animate font-semibold text-black dark:text-white">
-      Hi, I'm Nano <span class="text-xl">👋🏻</span> 
+      Hi, I'm Mário Coxe <span class="text-xl">👋🏻</span> 
     </h4>
     <div class="space-y-16">
       <section>
         <article class="space-y-4">
           <p class="animate">
-            I am a minimal, seo friendly, accessible portfolio and blog for developers. 
-            I am an even more lightweight version of my popular theme
-            <Link href="https://github.com/markhorn-dev/astro-sphere" aria-label="Astro Sphere on Github" external>
-              Astro Sphere
+            Sou um programador full stack com experiência em Angular, React, Next.js e Vue.js, 
+            desenvolvendo interfaces modernas, responsivas e dinâmicas. No backend, trabalho 
+            com AdonisJS, Express e Laravel, criando APIs escaláveis, seguras e bem estruturadas.
+          </p>
+          <p class="animate">
+            Além do desenvolvimento web, tenho experiência no desenvolvimento de aplicações móveis 
+            utilizando React Native, criando soluções eficientes e otimizadas para Android e iOS. 
+            Também possuo conhecimentos básicos em redes de computadores, incluindo endereçamento IP, 
+            protocolos de comunicação (TCP/IP, HTTP, HTTPS), configuração de routers e switches, DNS, 
+            DHCP e segurança de redes.
+          </p>
+          <p class="animate">
+            Acredito em código bem estruturado, otimização de desempenho e acessibilidade. 
+            Os meus projetos são desenvolvidos com foco em eficiência, boas práticas e experiência do usuário. 
+            Para mais detalhes sobre o meu trabalho, visita o meu repositório no
+            <Link href="https://github.com/Mario-Coxe" aria-label="Meu GitHub" external>
+              Meu GitHub
             </Link>.
-            I have a lighthouse scores of 100 across the board for performance, 
-            accesibility, best practices and SEO.
-          </p>
-          <p class="animate">
-            I come packed with full type safety, a sitemap, an rss feed, markdown 
-            and mdx support (use components in your markdown) through astro integrations.
-            I am styled with tailwind and come preconfigured with light, dark and 
-            system/os theme preferences out of the box.
-          </p>
-          <p class="animate">
-            Visit
-            <Link href="https://github.com/markhorn-dev/astro-nano" aria-label="Astro Nano on Github" external>
-              Astro Nano on Github
-            </Link>
-            to fork the repository, read the docs or one-click deploy on Vercel or Netlify. 
           </p>
         </article>
       </section>
+      
+
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">
-            Latest posts
-          </h5>
-          <Link href="/blog">
-            See all posts
-          </Link>
-        </div>
-        <ul class="flex flex-col gap-4">
-          {blog.map(post => (
-            <li>
-              <ArrowCard entry={post} />
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Work Experience
+            Experiência Profissional
           </h5>
           <Link href="/work">
-            See all work
+            Ver todas as experiências
           </Link>
         </div>
         <ul class="flex flex-col space-y-4">
@@ -109,6 +91,27 @@ const work = await Promise.all(
           ))}
         </ul>
       </section>
+      
+
+      <!-- <section class="animate space-y-6">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Latest posts
+          </h5>
+          <Link href="/blog">
+            See all posts
+          </Link>
+        </div>
+        <ul class="flex flex-col gap-4">
+          {blog.map(post => (
+            <li>
+              <ArrowCard entry={post} />
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
@@ -126,34 +129,35 @@ const work = await Promise.all(
             </li>
           ))}
         </ul>
-      </section>
+      </section> -->
 
       <section class="animate space-y-4">
         <h5 class="font-semibold text-black dark:text-white">
-          Let's Connect
+          Vamos Conectar-nos
         </h5>
         <article>
           <p>
-            If you want to get in touch with me about something or just to say hi,
-            reach out on social media or send me an email.
+            Se quiseres entrar em contacto comigo para falar sobre algo ou simplesmente dizer olá, 
+            podes encontrar-me nas redes sociais ou enviar-me um email.
           </p>
         </article>
         <ul class="flex flex-wrap gap-2">
           {SOCIALS.map(SOCIAL => (
             <li class="flex gap-x-2 text-nowrap">
-              <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
+              <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} no ${SOCIAL.NAME}`}>
                 {SOCIAL.NAME}
               </Link>
               {"/"}
             </li>
           ))}
           <li class="line-clamp-1">
-            <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`}>
+            <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email para ${SITE.NAME}`}>
               {SITE.EMAIL}
             </Link>
           </li>
         </ul>
       </section>
+      
     </div>
   </Container>
 </PageLayout>
